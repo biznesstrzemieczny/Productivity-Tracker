@@ -1,22 +1,18 @@
 # Productivity Tracker
 
-Prosta aplikacja do śledzenia efektywności pracy w ciągu dnia. Zapisujesz sesje, oceniasz je po skończeniu – aplikacja pokazuje, kiedy pracujesz najlepiej.
+A web app for tracking work efficiency throughout the day. You log sessions, rate them when done – the app shows when you work best.
 
-## Co robi
+## Features
 
-- **Sesje** – uruchamiasz timer (np. 60 min), po zakończeniu oceniasz sesję suwakami: energia, skupienie, nastrój, stres, wynik.
-- **Lista wpisów** – wszystkie sesje w jednym miejscu, możesz usuwać wybrane.
-- **Wykres** – efektywność w czasie, dzień po dniu, z płynną linią łączącą punkty.
-- **Your Insights** – najlepsze godziny do pracy, rekomendacja oraz chronotyp (Lion / Bear / Wolf / Dolphin).
+- **Sessions** – Start a timer (e.g. 60 min), rate the session afterwards with sliders: energy, focus, mood, stress, result.
+- **Saved check-ins** – All sessions in one list, with bulk delete.
+- **Hourly efficiency chart** – Efficiency over time, day by day, with a smooth line connecting data points.
+- **Your Insights** – Best hours to work, personalized recommendation, and chronotype (Lion / Bear / Wolf / Dolphin).
 
-## Nagłówek
+## Customizable header
 
-Tytuł i podtytuł są edytowalne (domyślnie: „Productivity Tracker” i „Jakub Strzemieczny”). Kliknij ikonę ołówka, zmień tekst i zapisz.
+Title and subtitle are editable (default: "Productivity Tracker" and your name). Edit and save to personalize.
 
-## Design
+## Data
 
-Ciemny motyw, półprzezroczyste karty, responsywny układ – na telefonie sekcje układają się jedna pod drugą.
-
-## Dane
-
-Wszystko zapisuje się lokalnie w przeglądarce. Brak konta, brak serwera – działa offline po pierwszym załadowaniu.
+All data is stored locally in the browser. No account, no backend – works offline after first load.
