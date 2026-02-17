@@ -184,8 +184,9 @@ const LinearChart = ({ entries, onDelete }) => {
     // Handle click on chart using activePayload when available
     if (data && data.activePayload && data.activePayload[0] && data.activePayload[0].payload) {
       const payload = data.activePayload[0].payload;
-      if (payload && payload.id !== undefined && payload.id !== null) {
-        const deleted = deleteEntry(payload.id);
+      const entryId = payload?.entryId;
+      if (entryId !== undefined && entryId !== null) {
+        const deleted = deleteEntry(entryId);
         if (deleted && onDelete) {
           onDelete();
         }
