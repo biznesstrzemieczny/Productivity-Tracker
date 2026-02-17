@@ -1,56 +1,22 @@
-# PeakState - Odkryj Swój Rytm Dobowy
+# Productivity Tracker
 
-Aplikacja webowa pomagająca studentom odkryć ich indywidualny rytm dobowy i "Biological Prime Time" na podstawie zbieranych danych.
+Prosta aplikacja do śledzenia efektywności pracy w ciągu dnia. Zapisujesz sesje, oceniasz je po skończeniu – aplikacja pokazuje, kiedy pracujesz najlepiej.
 
-## Funkcjonalności
+## Co robi
 
-- **Check-in/Check-out**: Prosty formularz z suwakami (1-10) dla czterech parametrów:
-  - Energy (budzenie biologiczne)
-  - Focus (głębokie skupienie)
-  - Mood (przyjemność z pracy)
-  - Result (realny postęp w nauce)
+- **Sesje** – uruchamiasz timer (np. 60 min), po zakończeniu oceniasz sesję suwakami: energia, skupienie, nastrój, stres, wynik.
+- **Lista wpisów** – wszystkie sesje w jednym miejscu, możesz usuwać wybrane.
+- **Wykres** – efektywność w czasie, dzień po dniu, z płynną linią łączącą punkty.
+- **Your Insights** – najlepsze godziny do pracy, rekomendacja oraz chronotyp (Lion / Bear / Wolf / Dolphin).
 
-- **Analityka**:
-  - Linear Performance Chart: Wykres liniowy pokazujący fluktuacje energii i skupienia w ciągu dnia
-  - Heatmapa Tygodniowa: Wizualizacja dni i godzin najwyższej efektywności
+## Nagłówek
 
-- **Insight Engine**: Automatyczne wykrywanie:
-  - Złotej Godziny (godzina najwyższej efektywności)
-  - Chronotypu (Lwica/Niedźwiedź/Wilk/Delfin)
-
-## Stack Techniczny
-
-- **Frontend**: React + Tailwind CSS + Lucide Icons
-- **Wykresy**: Recharts
-- **Persystencja**: LocalStorage (Local-first approach)
-
-## Instalacja
-
-```bash
-npm install
-```
-
-## Uruchomienie
-
-```bash
-npm run dev
-```
-
-Aplikacja będzie dostępna pod adresem `http://localhost:5173`
-
-## Build
-
-```bash
-npm run build
-```
+Tytuł i podtytuł są edytowalne (domyślnie: „Productivity Tracker” i „Jakub Strzemieczny”). Kliknij ikonę ołówka, zmień tekst i zapisz.
 
 ## Design
 
-- Dark Mode z gradientowym tłem
-- Glassmorphism (przezroczyste karty)
-- Responsywny design (mobile-first)
-- Premium minimalistyczny styl
+Ciemny motyw, półprzezroczyste karty, responsywny układ – na telefonie sekcje układają się jedna pod drugą.
 
-## Prywatność
+## Dane
 
-Wszystkie dane są przechowywane lokalnie w przeglądarce użytkownika. Nie ma potrzeby zakładania konta - aplikacja działa w pełni offline po pierwszym załadowaniu.
+Wszystko zapisuje się lokalnie w przeglądarce. Brak konta, brak serwera – działa offline po pierwszym załadowaniu.
