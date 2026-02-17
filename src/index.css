@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black h-screen text-white overflow-hidden;
+    background: 
+      /* Dots pattern */
+      radial-gradient(circle, rgba(34, 197, 94, 0.06) 1px, transparent 1px),
+      /* Gradient overlay */
+      radial-gradient(at 20% 30%, rgba(34, 197, 94, 0.05) 0px, transparent 50%),
+      radial-gradient(at 80% 70%, rgba(34, 197, 94, 0.03) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(22, 163, 74, 0.025) 0px, transparent 50%),
+      /* Base gradient */
+      linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #000000 50%, #0a0a0a 75%, #000000 100%);
+    background-size: 
+      40px 40px,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%;
+    background-position: 
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 30% 20%, rgba(34, 197, 94, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 70% 80%, rgba(22, 163, 74, 0.025) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulse 8s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  #root {
+    @apply h-screen overflow-hidden relative z-10;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-gray-900/40 border border-gray-800/50 backdrop-blur-xl rounded-2xl relative;
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    border-color: rgba(34, 197, 94, 0.3);
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(34, 197, 94, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 20px rgba(34, 197, 94, 0.1);
+  }
+  
+  .glass-card:hover::before {
+    opacity: 1;
+  }
+  
+  .slider-thumb {
+    @apply appearance-none w-full h-2 bg-gray-900/60 border border-green-600/20 backdrop-blur-xl rounded-lg outline-none cursor-pointer;
+  }
+  
+  .slider-thumb::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 bg-gray-900/80 border-2 border-green-600/40 backdrop-blur-xl rounded-full cursor-grab;
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.2), inset 0 0 8px rgba(22, 163, 74, 0.1);
+  }
+  
+  .slider-thumb::-webkit-slider-thumb:active {
+    @apply cursor-grabbing;
+    border-color: rgba(22, 163, 74, 0.6);
+    box-shadow: 0 0 12px rgba(22, 163, 74, 0.3), inset 0 0 8px rgba(22, 163, 74, 0.15);
+  }
+  
+  .slider-thumb::-moz-range-thumb {
+    @apply w-5 h-5 bg-gray-900/80 border-2 border-green-600/40 backdrop-blur-xl rounded-full cursor-grab;
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.2), inset 0 0 8px rgba(22, 163, 74, 0.1);
+  }
+  
+  .slider-thumb::-moz-range-thumb:active {
+    @apply cursor-grabbing;
+    border-color: rgba(22, 163, 74, 0.6);
+    box-shadow: 0 0 12px rgba(22, 163, 74, 0.3), inset 0 0 8px rgba(22, 163, 74, 0.15);
+  }
+  
+  .slider-thumb::-webkit-slider-thumb:hover {
+    border-color: rgba(22, 163, 74, 0.5);
+    box-shadow: 0 0 12px rgba(22, 163, 74, 0.25), inset 0 0 8px rgba(22, 163, 74, 0.12);
+  }
+  
+  .slider-thumb::-moz-range-thumb:hover {
+    border-color: rgba(22, 163, 74, 0.5);
+    box-shadow: 0 0 12px rgba(22, 163, 74, 0.25), inset 0 0 8px rgba(22, 163, 74, 0.12);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.2), 0 0 30px rgba(34, 197, 94, 0.1);
+  }
+  
+  .shiny-gradient-title {
+    background: linear-gradient(135deg, #047857 0%, #059669 20%, #10b981 40%, #34d399 60%, #6ee7b7 80%, #a7f3d0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
