@@ -9,10 +9,6 @@ A web app for tracking work efficiency throughout the day. You log sessions, rat
 - **Hourly efficiency chart** – Efficiency over time, day by day, with a smooth line connecting data points.
 - **Your Insights** – Best hours to work, personalized recommendation, and chronotype (Lion / Bear / Wolf / Dolphin).
 
-## Customizable header
-
-Title and subtitle are editable (default: "Productivity Tracker" and your name). Edit and save to personalize.
-
 ## Data
 
 All data is stored locally in the browser. No account, no backend – works offline after first load.
